@@ -1,0 +1,14 @@
+function persistence(num) {
+  var multiplicativePersistence = 0;
+  while (num > 9) {
+     num = num.toString().split("");
+     var res = 1;
+     for (var i = 0; i < num.length; i++) {
+       res *= parseInt(num[i]);
+     }
+     multiplicativePersistence++;
+     num = res;
+     console.log(multiplicativePersistence);
+  }
+  return multiplicativePersistence;
+}
